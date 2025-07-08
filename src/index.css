@@ -1,0 +1,5 @@
+.scroll-container {
+  width: 100%; /* Or a specific width */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents content from wrapping */
+}
