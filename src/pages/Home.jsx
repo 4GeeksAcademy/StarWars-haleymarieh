@@ -39,17 +39,17 @@ export const Home = () => {
 		}, []
 	)
 // this is where i left off i am confused on where and how i should pass props in this, would i need to do it in the return like i did with my previous fetches?
-	useEffect (
-		() =>
-		fetch("https://www.swapi.tech/api/people/")
-		.then(resp => resp.json())
-		.then(StarWarsInfo => {
-			console.log(StarWarsInfo);
-		})
-		.catch(error =>{
-			console.error("Error fetching StarWarsInfo:", error);
-		})
-	)
+	// useEffect ( 
+	// 	() =>
+	// 	fetch("https://www.swapi.tech/api/people/")
+	// 	.then(resp => resp.json())
+	// 	.then(StarWarsInfo => {
+	// 		console.log(StarWarsInfo);
+	// 	})
+	// 	.catch(error =>{
+	// 		console.error("Error fetching StarWarsInfo:", error);
+	// 	})
+	// )
 
 
 

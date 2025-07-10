@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import useGlobalReducer from "../hooks/useGlobalReducer";
 export const Peoplecard = (props) => {
+    const { store, dispatch } = useGlobalReducer()
 
 
     return (
@@ -9,7 +11,12 @@ export const Peoplecard = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.character.name}  :{props.id}</h5>
                     <p className="card-text"></p>
-                    <Link to={"/details/" + props.id} ><span className="btn btn-primary">Learn more info!</span></Link>
+                    <Link to={"/people/" + props.id} ><span className="btn btn-primary">Learn more info!</span></Link>
+                    <button onClick={() => dispatch({
+                        type: "add_favorite",
+                        payload: { name: props.character.name, uid: props.id, url: props.character.url }
+                    })}
+                        className="favorites btn btn-primary">Add Favorites</button>
                 </div>
             </div>
         </div>
@@ -17,6 +24,8 @@ export const Peoplecard = (props) => {
 };
 
 export const Planetcard = (props) => {
+  const { store, dispatch } = useGlobalReducer()
+
 
 
     return (
@@ -26,7 +35,12 @@ export const Planetcard = (props) => {
                 <div className="card-body">
                     <h5 className="card-title">{props.planet.name}</h5>
                     <p className="card-text"></p>
-                    <a href="#" className="btn btn-primary">Learn more info!</a>
+                    <Link to={"/planets/" + props.id} ><span className="btn btn-primary">Learn more info!</span></Link>
+                     <button onClick={() => dispatch({
+                        type: "add_favorite",
+                        payload: { name: props.planet.name, uid: props.id, url:props.planet.url }
+                    })}
+                        className="favorites btn btn-primary">Add Favorites</button>
                 </div>
             </div>
         </div>
@@ -56,3 +70,5 @@ export const StarWarsInfo = (props) => {
         </div>
     );
 };
+
+
