@@ -3,3 +3,74 @@
   overflow-x: auto; /* Enables horizontal scrolling */
   white-space: nowrap; /* Prevents content from wrapping */
 }
+
+/* Make card layout modern and polished */
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin: 0.75rem; /* Adds spacing between cards */
+}
+
+/* Add padding around the card groups */
+.cards-container {
+  padding: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top,
+.img-fluid {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0; /* Prevent extra space below image */
+}
+
+.card-body {
+  padding: 1.2rem;
+  background: #f9f9f9;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border: none;
+  margin-right: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #003d80;
+}
+
+.favorites {
+  margin-top: 0.5rem;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-buttons .btn {
+  margin: 0;
+}
+
+
